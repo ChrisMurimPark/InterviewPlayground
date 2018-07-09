@@ -7,11 +7,25 @@
 //
 
 #include <iostream>
-#include "mergesort.hpp"
+#include "topological_sort.hpp"
 
 int main(int argc, const char * argv[]) {
-    std::vector<int> arr(10);
-    arr.resize(5);
-    std::cout << arr.size() << std::endl;
+    TopologicalSort sorter;
+    std::unordered_map<int, std::unordered_set<int>> graph;
+    graph[1] = std::unordered_set<int>({2, 6});
+    graph[2] = std::unordered_set<int>({8});
+    graph[3] = std::unordered_set<int>();
+    graph[4] = std::unordered_set<int>({3, 5, 9});
+    graph[5] = std::unordered_set<int>({9});
+    graph[6] = std::unordered_set<int>();
+    graph[7] = std::unordered_set<int>({1, 2, 3});
+    graph[8] = std::unordered_set<int>();
+    graph[9] = std::unordered_set<int>({3});
+    graph[10] = std::unordered_set<int>({5});
+    std::vector<int> sorted = sorter.Sort(graph);
+    for (const int &v : sorted)
+    {
+        std::cout << v << std::endl;
+    }
     return 0;
 }
