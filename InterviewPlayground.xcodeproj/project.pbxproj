@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F34556620F420F40055C252 /* topological_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F34556420F420F40055C252 /* topological_sort.cpp */; };
+		1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B637B20F560C900EF1606 /* prims_mst.cpp */; };
 		1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */; };
 		1FB0392720EC46C700FA2FAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0392620EC46C700FA2FAB /* main.cpp */; };
 		1FB0392F20EC5E3500FA2FAB /* quicksort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0392D20EC5E3500FA2FAB /* quicksort.cpp */; };
@@ -28,6 +29,9 @@
 /* Begin PBXFileReference section */
 		1F34556420F420F40055C252 /* topological_sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = topological_sort.cpp; sourceTree = "<group>"; };
 		1F34556520F420F40055C252 /* topological_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = topological_sort.hpp; sourceTree = "<group>"; };
+		1F5B637B20F560C900EF1606 /* prims_mst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prims_mst.cpp; sourceTree = "<group>"; };
+		1F5B637C20F560C900EF1606 /* prims_mst.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = prims_mst.hpp; sourceTree = "<group>"; };
+		1F5B638020F5634400EF1606 /* HashCombine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashCombine.hpp; sourceTree = "<group>"; };
 		1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mergesort.cpp; sourceTree = "<group>"; };
 		1F67C6CD20ED17DB00809BD9 /* mergesort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mergesort.hpp; sourceTree = "<group>"; };
 		1FB0392320EC46C700FA2FAB /* InterviewPlayground */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = InterviewPlayground; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F5B637E20F5631B00EF1606 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				1F5B638020F5634400EF1606 /* HashCombine.hpp */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
 		1FB0391A20EC46C700FA2FAB = {
 			isa = PBXGroup;
 			children = (
@@ -66,6 +78,7 @@
 		1FB0392520EC46C700FA2FAB /* InterviewPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				1F5B637E20F5631B00EF1606 /* Utils */,
 				1FB0392620EC46C700FA2FAB /* main.cpp */,
 				1FB0392D20EC5E3500FA2FAB /* quicksort.cpp */,
 				1FB0392E20EC5E3500FA2FAB /* quicksort.hpp */,
@@ -73,6 +86,8 @@
 				1F67C6CD20ED17DB00809BD9 /* mergesort.hpp */,
 				1F34556420F420F40055C252 /* topological_sort.cpp */,
 				1F34556520F420F40055C252 /* topological_sort.hpp */,
+				1F5B637B20F560C900EF1606 /* prims_mst.cpp */,
+				1F5B637C20F560C900EF1606 /* prims_mst.hpp */,
 			);
 			path = InterviewPlayground;
 			sourceTree = "<group>";
@@ -136,6 +151,7 @@
 				1FB0392720EC46C700FA2FAB /* main.cpp in Sources */,
 				1F34556620F420F40055C252 /* topological_sort.cpp in Sources */,
 				1FB0392F20EC5E3500FA2FAB /* quicksort.cpp in Sources */,
+				1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */,
 				1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

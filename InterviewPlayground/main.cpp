@@ -7,25 +7,16 @@
 //
 
 #include <iostream>
-#include "topological_sort.hpp"
+#include "prims_mst.hpp"
 
 int main(int argc, const char * argv[]) {
-    TopologicalSort sorter;
-    std::unordered_map<int, std::unordered_set<int>> graph;
-    graph[1] = std::unordered_set<int>({2, 6});
-    graph[2] = std::unordered_set<int>({8});
-    graph[3] = std::unordered_set<int>();
-    graph[4] = std::unordered_set<int>({3, 5, 9});
-    graph[5] = std::unordered_set<int>({9});
-    graph[6] = std::unordered_set<int>();
-    graph[7] = std::unordered_set<int>({1, 2, 3});
-    graph[8] = std::unordered_set<int>();
-    graph[9] = std::unordered_set<int>({3});
-    graph[10] = std::unordered_set<int>({5});
-    std::vector<int> sorted = sorter.Sort(graph);
-    for (const int &v : sorted)
-    {
-        std::cout << v << std::endl;
-    }
+    Graph g;
+    g.emplace(std::make_pair(1, AdjNodeSet({AdjNode({2, 20}), AdjNode({3, 5}), AdjNode({4, 10})})));
+    g.emplace(std::make_pair(2, AdjNodeSet({AdjNode({1, 20}), AdjNode({4, 5})})));
+    g.emplace(std::make_pair(3, AdjNodeSet({AdjNode({1, 5}), AdjNode({4, 1})})));
+    g.emplace(std::make_pair(4, AdjNodeSet({AdjNode({1, 10}), AdjNode({2, 5}), AdjNode({3, 1})})));
+    EdgeSet edges = PrimsMST(g);
+    for (auto itr = edges.begin(), end = edges.end(); itr != end; ++itr)
+        std::cout << itr->first << ", " << itr->second << std::endl;
     return 0;
 }
