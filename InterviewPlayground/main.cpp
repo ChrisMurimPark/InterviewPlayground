@@ -7,16 +7,49 @@
 //
 
 #include <iostream>
-#include "prims_mst.hpp"
+#include <assert.h>
+#include "hash_table.hpp"
 
 int main(int argc, const char * argv[]) {
-    Graph g;
-    g.emplace(std::make_pair(1, AdjNodeSet({AdjNode({2, 20}), AdjNode({3, 5}), AdjNode({4, 10})})));
-    g.emplace(std::make_pair(2, AdjNodeSet({AdjNode({1, 20}), AdjNode({4, 5})})));
-    g.emplace(std::make_pair(3, AdjNodeSet({AdjNode({1, 5}), AdjNode({4, 1})})));
-    g.emplace(std::make_pair(4, AdjNodeSet({AdjNode({1, 10}), AdjNode({2, 5}), AdjNode({3, 1})})));
-    EdgeSet edges = PrimsMST(g);
-    for (auto itr = edges.begin(), end = edges.end(); itr != end; ++itr)
-        std::cout << itr->first << ", " << itr->second << std::endl;
+    HashTable table;
+    bool found;
+    assert(table.Contains(1) == false);
+    
+    table.Set(1, 2);
+    assert(table.Find(1, &found) == 2);
+    assert(found == true);
+    
+    table.Set(2, 3);
+    assert(table.Contains(2) == true);
+    assert(table.Find(2, &found) == 3);
+    assert(found == true);
+    
+    table.Set(2, 100);
+    assert(table.Contains(2) == true);
+    assert(table.Find(2, &found) == 100);
+    assert(found == true);
+    
+    assert(table.Find(3, &found) == -1);
+    assert(found == false);
+    
+    table.Set(10, 10);
+    table.Set(50, 50);
+    table.Set(13, 13);
+    table.Set(6, 6);
+    table.Set(7, 7);
+    table.Set(8, 8);
+    table.Set(15, 15);
+    
+    bool deleted;
+    table.Delete(10, &deleted);
+    table.Delete(50, &deleted);
+    table.Delete(13, &deleted);
+    table.Delete(6, &deleted);
+    table.Delete(7, &deleted);
+    table.Delete(8, &deleted);
+    
+    assert(table.Contains(10) == false);
+    assert(table.Contains(50) == false);
+    
     return 0;
 }
