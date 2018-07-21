@@ -8,48 +8,20 @@
 
 #include <iostream>
 #include <assert.h>
-#include "hash_table.hpp"
+#include <unordered_map>
+#include "custom_hash.hpp"
 
 int main(int argc, const char * argv[]) {
-    HashTable table;
-    bool found;
-    assert(table.Contains(1) == false);
+    std::unordered_map<MyStruct, int> struct_map;
     
-    table.Set(1, 2);
-    assert(table.Find(1, &found) == 2);
-    assert(found == true);
+    MyStruct s1 = {1, "s1", {1, 2, 3}};
+    MyStruct s2 = {2, "s2", {3, 2, 1}};
     
-    table.Set(2, 3);
-    assert(table.Contains(2) == true);
-    assert(table.Find(2, &found) == 3);
-    assert(found == true);
+    struct_map[s1] = 1;
+    struct_map[s2] = 2;
     
-    table.Set(2, 100);
-    assert(table.Contains(2) == true);
-    assert(table.Find(2, &found) == 100);
-    assert(found == true);
-    
-    assert(table.Find(3, &found) == -1);
-    assert(found == false);
-    
-    table.Set(10, 10);
-    table.Set(50, 50);
-    table.Set(13, 13);
-    table.Set(6, 6);
-    table.Set(7, 7);
-    table.Set(8, 8);
-    table.Set(15, 15);
-    
-    bool deleted;
-    table.Delete(10, &deleted);
-    table.Delete(50, &deleted);
-    table.Delete(13, &deleted);
-    table.Delete(6, &deleted);
-    table.Delete(7, &deleted);
-    table.Delete(8, &deleted);
-    
-    assert(table.Contains(10) == false);
-    assert(table.Contains(50) == false);
+    assert(struct_map[s1] == 1);
+    assert(struct_map[s2] == 2);
     
     return 0;
 }

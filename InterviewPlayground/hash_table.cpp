@@ -89,7 +89,8 @@ size_t HashTable::Hash(int key, size_t mod) const
 {
     if (key < 0)
         key = -key;
-    size_t hash_value = key % mod;
+    std::hash<int> hasher;
+    size_t hash_value = hasher(key) % mod;
     return hash_value;
 }
 
