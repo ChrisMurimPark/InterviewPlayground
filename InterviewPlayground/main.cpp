@@ -9,19 +9,39 @@
 #include <iostream>
 #include <assert.h>
 #include <unordered_map>
-#include "custom_hash.hpp"
+#include <memory>
+
+#include "dijkstra.hpp"
 
 int main(int argc, const char * argv[]) {
-    std::unordered_map<MyStruct, int> struct_map;
     
-    MyStruct s1 = {1, "s1", {1, 2, 3}};
-    MyStruct s2 = {2, "s2", {3, 2, 1}};
+    Graph g = {
+        {'A', { WeightedVertex {'B', 10}, WeightedVertex {'C', 6} }},
+        {'B', { WeightedVertex {'A', 10}, WeightedVertex {'D', 1} }},
+        {'C', { WeightedVertex {'A', 6}, WeightedVertex {'D', 6} }},
+        {'D', { WeightedVertex {'B', 1}, WeightedVertex {'C', 6}, WeightedVertex {'E',8} }},
+        {'E', { WeightedVertex {'D', 8 } }}
+    };
     
-    struct_map[s1] = 1;
-    struct_map[s2] = 2;
+    Dijkstra d;
+    DijkstraResult result = d.dijsktra(g, 'A');
     
-    assert(struct_map[s1] == 1);
-    assert(struct_map[s2] == 2);
+    std::cout << "Distances" << std::endl;
+    for (auto itr = result.distances.begin(), end = result.distances.end(); itr != end; ++itr)
+    {
+        std::cout << itr->first << ": " << itr->second << std::endl;
+    }
+    
+    std::cout << "Paths" << std::endl;
+    for (auto itr = result.shortest_paths.begin(), end = result.shortest_paths.end(); itr != end; ++itr)
+    {
+        std::cout << itr->first << ": ";
+        for (auto path_itr = itr->second.begin(), path_end = itr->second.end(); path_itr != path_end; ++path_itr)
+        {
+            std::cout << *path_itr << " ";
+        }
+        std::cout << std::endl;
+    }
     
     return 0;
 }

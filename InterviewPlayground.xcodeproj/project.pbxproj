@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F2071AE210408A700A788F2 /* dijkstra.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F2071AC210408A700A788F2 /* dijkstra.cpp */; };
 		1F34556620F420F40055C252 /* topological_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F34556420F420F40055C252 /* topological_sort.cpp */; };
 		1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B637B20F560C900EF1606 /* prims_mst.cpp */; };
 		1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */; };
@@ -29,6 +30,8 @@
 
 /* Begin PBXFileReference section */
 		1F2071AA21039BED00A788F2 /* custom_hash.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = custom_hash.hpp; sourceTree = "<group>"; };
+		1F2071AC210408A700A788F2 /* dijkstra.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = dijkstra.cpp; sourceTree = "<group>"; };
+		1F2071AD210408A700A788F2 /* dijkstra.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = dijkstra.hpp; sourceTree = "<group>"; };
 		1F34556420F420F40055C252 /* topological_sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = topological_sort.cpp; sourceTree = "<group>"; };
 		1F34556520F420F40055C252 /* topological_sort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = topological_sort.hpp; sourceTree = "<group>"; };
 		1F5B637B20F560C900EF1606 /* prims_mst.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = prims_mst.cpp; sourceTree = "<group>"; };
@@ -95,6 +98,8 @@
 				1F7CDB0F20F7BE32003E783F /* hash_table.cpp */,
 				1F7CDB1020F7BE32003E783F /* hash_table.hpp */,
 				1F2071AA21039BED00A788F2 /* custom_hash.hpp */,
+				1F2071AC210408A700A788F2 /* dijkstra.cpp */,
+				1F2071AD210408A700A788F2 /* dijkstra.hpp */,
 			);
 			path = InterviewPlayground;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 			files = (
 				1FB0392720EC46C700FA2FAB /* main.cpp in Sources */,
 				1F34556620F420F40055C252 /* topological_sort.cpp in Sources */,
+				1F2071AE210408A700A788F2 /* dijkstra.cpp in Sources */,
 				1FB0392F20EC5E3500FA2FAB /* quicksort.cpp in Sources */,
 				1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */,
 				1F7CDB1120F7BE32003E783F /* hash_table.cpp in Sources */,
