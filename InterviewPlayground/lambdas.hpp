@@ -17,4 +17,6 @@ int IntegerDivide(const int &lhs, const int &rhs);
 
 int Multiply(const int &lhs, const int &rhs);
 
+int AddWithMagicNumber(const int &i);
+
 #endif /* lambdas_hpp */

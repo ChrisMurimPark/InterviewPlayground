@@ -18,6 +18,7 @@ int main(int argc, const char * argv[]) {
     assert(Subtract(a, b) == 3);
     assert(IntegerDivide(a, b) == 2);
     assert(Multiply(a, b) == 10);
+    assert(AddWithMagicNumber(a) == 18);
     
     return 0;
 }

@@ -34,3 +34,10 @@ int Multiply(const int &lhs, const int &rhs)
 {
     return ExecuteFunction([](const int &lhs, const int &rhs) { return lhs * rhs; }, lhs, rhs);
 }
+
+int AddWithMagicNumber(const int &i)
+{
+    const int magic_number = 13;
+    auto func = [&magic_number](const int &i) { return magic_number + i; };
+    return func(i);
+}
