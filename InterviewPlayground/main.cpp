@@ -7,15 +7,17 @@
 //
 
 #include <iostream>
-#include "min_heap.hpp"
+#include <assert.h>
+#include "lambdas.hpp"
 
 int main(int argc, const char * argv[]) {
-    std::vector<int> v {5, 2, 7, 2, 4, 1, 90};
-    MinHeap q = min_heapify(v);
-    while (!q.empty())
-    {
-        std::cout << q.top() << std::endl;
-        q.pop();
-    }
+    int a = 5;
+    int b = 2;
+    
+    assert(Add(a, b) == 7);
+    assert(Subtract(a, b) == 3);
+    assert(IntegerDivide(a, b) == 2);
+    assert(Multiply(a, b) == 10);
+    
     return 0;
 }
