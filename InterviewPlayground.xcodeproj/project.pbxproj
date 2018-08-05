@@ -11,6 +11,7 @@
 		1F34556620F420F40055C252 /* topological_sort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F34556420F420F40055C252 /* topological_sort.cpp */; };
 		1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F5B637B20F560C900EF1606 /* prims_mst.cpp */; };
 		1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */; };
+		1F744A3221175362000AB4FA /* CommonOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F744A3021175362000AB4FA /* CommonOperations.cpp */; };
 		1F7CDB1120F7BE32003E783F /* hash_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7CDB0F20F7BE32003E783F /* hash_table.cpp */; };
 		1F8F488221166A2B00136156 /* min_heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F488021166A2B00136156 /* min_heap.cpp */; };
 		1F8F488521166C8F00136156 /* lambdas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F488321166C8F00136156 /* lambdas.cpp */; };
@@ -41,6 +42,8 @@
 		1F5B638020F5634400EF1606 /* HashCombine.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = HashCombine.hpp; sourceTree = "<group>"; };
 		1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = mergesort.cpp; sourceTree = "<group>"; };
 		1F67C6CD20ED17DB00809BD9 /* mergesort.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = mergesort.hpp; sourceTree = "<group>"; };
+		1F744A3021175362000AB4FA /* CommonOperations.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CommonOperations.cpp; sourceTree = "<group>"; };
+		1F744A3121175362000AB4FA /* CommonOperations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CommonOperations.hpp; sourceTree = "<group>"; };
 		1F7CDB0F20F7BE32003E783F /* hash_table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hash_table.cpp; sourceTree = "<group>"; };
 		1F7CDB1020F7BE32003E783F /* hash_table.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hash_table.hpp; sourceTree = "<group>"; };
 		1F8F488021166A2B00136156 /* min_heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = min_heap.cpp; sourceTree = "<group>"; };
@@ -72,6 +75,15 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		1F744A2F21175347000AB4FA /* BitOfBits */ = {
+			isa = PBXGroup;
+			children = (
+				1F744A3021175362000AB4FA /* CommonOperations.cpp */,
+				1F744A3121175362000AB4FA /* CommonOperations.hpp */,
+			);
+			path = BitOfBits;
+			sourceTree = "<group>";
+		};
 		1FB0391A20EC46C700FA2FAB = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +103,7 @@
 		1FB0392520EC46C700FA2FAB /* InterviewPlayground */ = {
 			isa = PBXGroup;
 			children = (
+				1F744A2F21175347000AB4FA /* BitOfBits */,
 				1F5B637E20F5631B00EF1606 /* Utils */,
 				1FB0392620EC46C700FA2FAB /* main.cpp */,
 				1FB0392D20EC5E3500FA2FAB /* quicksort.cpp */,
@@ -178,6 +191,7 @@
 				1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */,
 				1F7CDB1120F7BE32003E783F /* hash_table.cpp in Sources */,
 				1F8F488221166A2B00136156 /* min_heap.cpp in Sources */,
+				1F744A3221175362000AB4FA /* CommonOperations.cpp in Sources */,
 				1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

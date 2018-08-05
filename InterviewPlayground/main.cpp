@@ -8,17 +8,19 @@
 
 #include <iostream>
 #include <assert.h>
-#include "lambdas.hpp"
+#include "BitOfBits/CommonOperations.hpp"
 
 int main(int argc, const char * argv[]) {
-    int a = 5;
-    int b = 2;
-    
-    assert(Add(a, b) == 7);
-    assert(Subtract(a, b) == 3);
-    assert(IntegerDivide(a, b) == 2);
-    assert(Multiply(a, b) == 10);
-    assert(AddWithMagicNumber(a) == 18);
-    
+
+    assert(GetBit(10, 3));
+    assert(!GetBit(10, 2));
+    assert(SetBit(10, 2) == 14);
+    assert(SetBit(10, 1) == 10);
+    assert(ClearBit(10, 3) == 2);
+    assert(ClearBit(10, 0) == 10);
+    assert(ClearMSBtoI(13, 2) == 1);
+    assert(ClearItoZero(13, 2) == 8);
+    assert(UpdateBit(13, 1, 1) == 15);
+    assert(UpdateBit(13, 1, 0) == 13);
     return 0;
 }
