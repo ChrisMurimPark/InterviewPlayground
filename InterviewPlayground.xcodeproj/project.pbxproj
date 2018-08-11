@@ -13,6 +13,9 @@
 		1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F67C6CC20ED17DB00809BD9 /* mergesort.cpp */; };
 		1F744A3221175362000AB4FA /* CommonOperations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F744A3021175362000AB4FA /* CommonOperations.cpp */; };
 		1F7CDB1120F7BE32003E783F /* hash_table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F7CDB0F20F7BE32003E783F /* hash_table.cpp */; };
+		1F842C76211905F900D143EF /* threads.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F842C74211905F900D143EF /* threads.cpp */; };
+		1F842C79211BB51200D143EF /* locks.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F842C77211BB51200D143EF /* locks.cpp */; };
+		1F842C7F211F6EDA00D143EF /* algorithm_library.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F842C7D211F6EDA00D143EF /* algorithm_library.cpp */; };
 		1F8F488221166A2B00136156 /* min_heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F488021166A2B00136156 /* min_heap.cpp */; };
 		1F8F488521166C8F00136156 /* lambdas.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1F8F488321166C8F00136156 /* lambdas.cpp */; };
 		1FB0392720EC46C700FA2FAB /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1FB0392620EC46C700FA2FAB /* main.cpp */; };
@@ -46,6 +49,12 @@
 		1F744A3121175362000AB4FA /* CommonOperations.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CommonOperations.hpp; sourceTree = "<group>"; };
 		1F7CDB0F20F7BE32003E783F /* hash_table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hash_table.cpp; sourceTree = "<group>"; };
 		1F7CDB1020F7BE32003E783F /* hash_table.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = hash_table.hpp; sourceTree = "<group>"; };
+		1F842C74211905F900D143EF /* threads.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = threads.cpp; sourceTree = "<group>"; };
+		1F842C75211905F900D143EF /* threads.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = threads.hpp; sourceTree = "<group>"; };
+		1F842C77211BB51200D143EF /* locks.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = locks.cpp; sourceTree = "<group>"; };
+		1F842C78211BB51200D143EF /* locks.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = locks.hpp; sourceTree = "<group>"; };
+		1F842C7D211F6EDA00D143EF /* algorithm_library.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = algorithm_library.cpp; sourceTree = "<group>"; };
+		1F842C7E211F6EDA00D143EF /* algorithm_library.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = algorithm_library.hpp; sourceTree = "<group>"; };
 		1F8F488021166A2B00136156 /* min_heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = min_heap.cpp; sourceTree = "<group>"; };
 		1F8F488121166A2B00136156 /* min_heap.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = min_heap.hpp; sourceTree = "<group>"; };
 		1F8F488321166C8F00136156 /* lambdas.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lambdas.cpp; sourceTree = "<group>"; };
@@ -123,6 +132,12 @@
 				1F8F488121166A2B00136156 /* min_heap.hpp */,
 				1F8F488321166C8F00136156 /* lambdas.cpp */,
 				1F8F488421166C8F00136156 /* lambdas.hpp */,
+				1F842C74211905F900D143EF /* threads.cpp */,
+				1F842C75211905F900D143EF /* threads.hpp */,
+				1F842C77211BB51200D143EF /* locks.cpp */,
+				1F842C78211BB51200D143EF /* locks.hpp */,
+				1F842C7D211F6EDA00D143EF /* algorithm_library.cpp */,
+				1F842C7E211F6EDA00D143EF /* algorithm_library.hpp */,
 			);
 			path = InterviewPlayground;
 			sourceTree = "<group>";
@@ -187,12 +202,15 @@
 				1F8F488521166C8F00136156 /* lambdas.cpp in Sources */,
 				1F34556620F420F40055C252 /* topological_sort.cpp in Sources */,
 				1F2071AE210408A700A788F2 /* dijkstra.cpp in Sources */,
+				1F842C7F211F6EDA00D143EF /* algorithm_library.cpp in Sources */,
 				1FB0392F20EC5E3500FA2FAB /* quicksort.cpp in Sources */,
 				1F5B637D20F560C900EF1606 /* prims_mst.cpp in Sources */,
 				1F7CDB1120F7BE32003E783F /* hash_table.cpp in Sources */,
 				1F8F488221166A2B00136156 /* min_heap.cpp in Sources */,
 				1F744A3221175362000AB4FA /* CommonOperations.cpp in Sources */,
 				1F67C6CE20ED17DB00809BD9 /* mergesort.cpp in Sources */,
+				1F842C79211BB51200D143EF /* locks.cpp in Sources */,
+				1F842C76211905F900D143EF /* threads.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

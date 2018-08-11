@@ -7,20 +7,46 @@
 //
 
 #include <iostream>
-#include <assert.h>
-#include "BitOfBits/CommonOperations.hpp"
+#include "algorithm_library.hpp"
 
 int main(int argc, const char * argv[]) {
+    
+    AllOf();
+    AnyOf();
+    NoneOf();
+    ForEach();
+    Count();
+    Mismatch();
+    Find();
+    FindEnd();
+    FindFirstOf();
+    AdjacentFind();
+    Search();
+    Copy();
+    CopyIf();
+    CopyBackward();
+    Move();
+    MoveBackward();
+    Fill();
+    Transform();
+    Generate();
+    Remove();
+    RemoveIf();
+    RemoveCopyIf();
+    Replace();
+    ReplaceIf();
+    ReplaceCopy();
+    ReplaceCopyIf();
+    Swap();
+    SwapRanges();
+    IterSwap();
+    Reverse();
+    ReverseCopy();
+    Rotate();
+    RotateCopy();
+    Shuffle();
+    Unique();
+    UniqueCopy();
 
-    assert(GetBit(10, 3));
-    assert(!GetBit(10, 2));
-    assert(SetBit(10, 2) == 14);
-    assert(SetBit(10, 1) == 10);
-    assert(ClearBit(10, 3) == 2);
-    assert(ClearBit(10, 0) == 10);
-    assert(ClearMSBtoI(13, 2) == 1);
-    assert(ClearItoZero(13, 2) == 8);
-    assert(UpdateBit(13, 1, 1) == 15);
-    assert(UpdateBit(13, 1, 0) == 13);
     return 0;
 }
